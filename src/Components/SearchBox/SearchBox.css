@@ -1,0 +1,36 @@
+.searchContainer {
+  grid-column: 2;
+}
+
+.searchBox {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 250px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 10px;
+
+    font-family: 'Kalam', cursive;
+    text-transform: capitalize;
+  }
+
+  input {
+      border-radius: 5px;
+  }
+
+  .typeSelect {
+    height: 50px;
+    padding: 10px;
+    width: 100px;
+    border-radius: 4px;
+    outline-style: none;
+    font-family: 'Kalam', cursive;
+    text-transform: capitalize;
+    position: relative;
+
+    top: 10px;
+    left: 10px;
+  }
