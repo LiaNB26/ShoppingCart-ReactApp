@@ -1,4 +1,4 @@
-Shopping Cart React App Project 
+.Shopping Cart React App Project <br />
 SVCollege Front End Course 2020
 
 https://lianb26.github.io/ShoppingCart-ReactApp/
