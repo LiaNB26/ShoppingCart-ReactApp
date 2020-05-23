@@ -3,7 +3,8 @@ Shopping Cart React App Project
 SVCollege Front End Course 2020
 
 Used State and Class components to write this app.
-Used grid css layout
+
+Used grid css layout, and React Router
 
 App Description:
 
