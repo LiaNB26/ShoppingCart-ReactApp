@@ -23,8 +23,6 @@ export default class HomePage extends Component {
 
     render() {
         return (
-
-
                 <div className="productList">
                     {
                         this.state.listOfProducts.map((product) => {

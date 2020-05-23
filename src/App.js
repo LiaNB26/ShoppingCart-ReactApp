@@ -19,7 +19,8 @@ export default class App extends Component {
       cartButton: 'block',
       buyButton: 'none',
       searchField: '',
-      category: ''
+      category: '',
+      reloadPage: false
     }
   }
 
@@ -88,6 +89,7 @@ export default class App extends Component {
 
   buyAllItems = () => {
     this.hideHomePageBtn();
+    this.setState({ searchField: '', category: '', reloadPage: true });
 
     if (this.state.shoppingCartList.length === 0) {
       alert('Nothing to Buy...\nYour Shopping Cart is Empty... :(');
@@ -96,7 +98,6 @@ export default class App extends Component {
       this.setState({ shoppingCartList: [], totalCartPrice: 0 });
       alert(`Thank You for Shopping at the Farmers' Market!!! :)`);
     }
-
   }
 
   clearAllItems = () => {
@@ -117,6 +118,12 @@ export default class App extends Component {
     this.setState({ category: e.target.value });
   }
 
+  componentDidUpdate() {
+    if(this.state.reloadPage) {
+      window.top.location.reload();
+    }
+  }
+
   render() {
     const { listOfProducts, searchField, category } = this.state;
     const filteredListByCategory = listOfProducts.filter(product => product.type.toLowerCase().includes(category.toLowerCase()));
@@ -131,7 +138,11 @@ export default class App extends Component {
             <button className="homeButton" onClick={this.hideHomePageBtn}>Home</button>
           </Link>
           <h2 className="homePageTitle" style={{ display: `${this.state.cartButton}` }}>Home Page</h2>
-          <SearchBox handleSearch={this.handleSearch} showSearchBox={this.state.cartButton} handleCategorySelect={this.handleCategorySelect} />
+          <SearchBox
+            handleSearch={this.handleSearch}
+            showSearchBox={this.state.cartButton}
+            handleCategorySelect={this.handleCategorySelect}
+            inputValue={this.state.searchField} />
 
           <Switch>
 

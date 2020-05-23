@@ -15,15 +15,15 @@ export default class SearchBox extends Component {
             <div className='searchContainer' style={{ display: this.props.showSearchBox }} >
                 <input
                     className="searchBox"
-                    type="search"
+                    value={this.props.inputValue}
                     placeholder='search for items...'
                     onChange={this.props.handleSearch} />
 
-                <select className='typeSelect'  onChange={this.props.handleCategorySelect}>
-                    <option value=''>All</option>
+                <select className='typeSelect' onChange={this.props.handleCategorySelect} >
+                    <option value='' >All</option>
                     {
                         this.state.listOfTypes.map(type => (
-                            <option value={`${type}`} >{type}</option>
+                            <option key={`${type}`} value={`${type}`} >{type}</option>
                         ))
                     }
                 </select>
