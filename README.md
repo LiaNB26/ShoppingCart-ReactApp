@@ -1,8 +1,7 @@
-.Shopping Cart React App Project <br />
+Shopping Cart React App Project <br />
 SVCollege Front End Course 2020
 
 https://lianb26.github.io/ShoppingCart-ReactApp/
-
 
 
 App Description:
@@ -21,7 +20,7 @@ in cart, see all the items you added
 	4. once clicking on the Buy button, all items from cart will be removed and page will go back to home page
 
 
-Used State and Class components to write this app 
+Used State and Class components to write this app <br />
 Used grid css layout, and React Router
 
 
